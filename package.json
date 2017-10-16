@@ -1,0 +1,31 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "A friend match site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hillaryellis37/FriendFinder.git"
+  },
+  "keywords": [
+    "friend",
+    "finder",
+    "dating",
+    "app"
+  ],
+  "author": "Hillary Ellis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hillaryellis37/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/hillaryellis37/FriendFinder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "path": "^0.12.7"
+  }
+}
