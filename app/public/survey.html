@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Survey</title>
+	<script src="https://code.jquery.com/jquery.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 
@@ -24,15 +25,15 @@
 		<form class="container" id="needs-validation" novalidate>
 			<div class="row justify-content-md-center">
 		    	<div class="col-md-12">
-		    		<label for="validationCustom01">Name (Required)</label>
-		    		<input type="text" class="form-control" id="validationCustom01" placeholder="Name" value="" required>
+		    		<label for="name">Name (Required)</label>
+		    		<input type="text" class="form-control" id="name" placeholder="Name" value="" required>
 				</div>
 			</div>
 			
 			<div class="row justify-content-md-center">
 		    	<div class="col-md-12">
-			      	<label for="validationCustom03">Link to Photo Image (Required)</label>
-			      	<input type="text" class="form-control" id="validationCustom03" placeholder="Image URL" required>
+			      	<label for="url">Link to Photo Image (Required)</label>
+			      	<input type="text" class="form-control" id="url" placeholder="Image URL" required>
 			      	<div class="invalid-feedback">
 			        Please provide a valid URL.
 			      	</div>
@@ -401,6 +402,24 @@
 	    }, false);
 	  }, false);
 	}());
+	</script>
+
+	<script type="text/JavaScript">
+	$(".button").on("click", function(event){
+		event.preventDefault();
+
+	var newFriend = {
+		name: $("#name"),
+		photo: $("#url"),
+		scores: [$("#rb-1"), $("#rb-2"), $("#rb-3"), $("#rb-4"), $("#rb-5"), $("#rb-6"), $("#rb-7"), $("#rb-8"), $("#rb-9"), $("#rb-10") ]
+
+	};
+
+	console.log(newFriend);
+
+
+	})
+
 	</script>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
