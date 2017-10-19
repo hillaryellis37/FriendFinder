@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Survey</title>
-	<script src="https://code.jquery.com/jquery.js"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 
@@ -374,21 +373,38 @@
 			    	</div>
 			  	</div>
 
-
-
-	  
-
 			  	<div class="button-box">
-			    	<button id="click" class="button trigger btn btn-primary">Submit!</button>
+			    	<button type="button" id="click" data-toggle="modal" data-target="#exampleModal"class="button trigger btn btn-primary">Submit!</button>
 			  	</div>
 			</div>
 		</form>
+
+
+
+<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  	<div class="modal-dialog" role="document">
+		    	<div class="modal-content">
+		      		<div class="modal-header">
+		        		<h5 class="modal-title" style="color:black;" id="exampleModalLabel">Can you believe it?!</h5>
+		        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          			<span aria-hidden="true">&times;</span>
+		        		</button>
+		     		</div>
+			      	<div style="color:black;" class="modal-body">
+			        	<p>Your Soulmate is <span id="sm-name"></span>!</p>
+			        	<img id="sm-img" src="">
+			     	</div>
+		   	 	</div>
+		  	</div>
+		</div>
 		
+
+
 	</div>
 
 
 	<script>
-	// Example starter JavaScript for disabling form submissions if there are invalid fields
 	(function() {
 	  "use strict";
 	  window.addEventListener("load", function() {
@@ -407,7 +423,13 @@
 
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   <script src="js/index.js"></script>
+
+
+
+
 
 </body>
 </html>

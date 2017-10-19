@@ -1,5 +1,7 @@
 
 var survey = []; 
+var soulmateName;
+var soulmateImg;
 
 //Switcher function:
 $(".rb-tab").click(function(){
@@ -9,22 +11,15 @@ $(".rb-tab").click(function(){
 });
 
 
-
-
-
 $(".trigger").on("click", function(event){
-  event.preventDefault();
-  
-  alert("clicked");
+  event.preventDefault(); 
 
   survey = [];
 
   for (i=1; i<=$(".rb").length; i++) {
     var rb = "rb" + i;
     var rbValue = parseInt($("#rb-"+i).find(".rb-tab-active").attr("data-value"));
-
     survey.push(rbValue); 
-    console.log(rbValue)
   };
 
 
@@ -38,7 +33,15 @@ $(".trigger").on("click", function(event){
 
 
   $.post("/api/friends/", newFriend, function(data) {
-    console.log(data);
+  });
+
+  $.get("/api/friends/", function(data) {
+    soulmateName = data[0].name;
+    soulmateImg = data[0].photo;
+
+    $("#sm-name").html(soulmateName);
+    $("#sm-img").attr("src", soulmateImg);
+
   });
 
 });
