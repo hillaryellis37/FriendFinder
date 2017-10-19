@@ -26,14 +26,14 @@
 			<div class="row justify-content-md-center">
 		    	<div class="col-md-12">
 		    		<label for="name">Name (Required)</label>
-		    		<input type="text" class="form-control" id="name" placeholder="Name" value="" required>
+		    		<input type="text" class="form-control" id="new-user" placeholder="Name" value="nameTest" required>
 				</div>
 			</div>
 			
 			<div class="row justify-content-md-center">
 		    	<div class="col-md-12">
 			      	<label for="url">Link to Photo Image (Required)</label>
-			      	<input type="text" class="form-control" id="url" placeholder="Image URL" required>
+			      	<input type="text" class="form-control" id="url" placeholder="Image URL" value="urlTest" required>
 			      	<div class="invalid-feedback">
 			        Please provide a valid URL.
 			      	</div>
@@ -318,7 +318,7 @@
 						  	<p>Strongly Agree</p>
 						</div>
 					</div>
-			    	<div class="rb-tab rb-tab-active" data-value="1">
+			    	<div id="q-9" class="rb-tab rb-tab-active" data-value="1">
 			      		<div class="rb-spot">
 			        		<span class="rb-txt">1</span>
 			      		</div>
@@ -379,7 +379,7 @@
 	  
 
 			  	<div class="button-box">
-			    	<button class="button trigger btn btn-primary">Submit!</button>
+			    	<button id="click" class="button trigger btn btn-primary">Submit!</button>
 			  	</div>
 			</div>
 		</form>
@@ -404,26 +404,10 @@
 	}());
 	</script>
 
-	<script type="text/JavaScript">
-	$(".button").on("click", function(event){
-		event.preventDefault();
 
-	var newFriend = {
-		name: $("#name"),
-		photo: $("#url"),
-		scores: [$("#rb-1"), $("#rb-2"), $("#rb-3"), $("#rb-4"), $("#rb-5"), $("#rb-6"), $("#rb-7"), $("#rb-8"), $("#rb-9"), $("#rb-10") ]
-
-	};
-
-	console.log(newFriend);
-
-
-	})
-
-	</script>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-  <script src="frontend_js/index.js"></script>
+  <script src="js/index.js"></script>
 
 </body>
 </html>
