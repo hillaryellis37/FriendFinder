@@ -5,31 +5,30 @@ var soulmateImg;
 // var quotient = 40;
 // var smallestSum = 0;
 var currentScore;
-var quotient = 40;
+var smallestDif = 40;
 
 function soulmateLogic(scores) {
 
-  var smallestSum = 0;
+  var dif = 0;
 
 
       for(var i = 0; i < scores.length; i++) {
 
-        console.log("check");
-
         var difference = Math.abs(parseInt(scores[i]) - currentScore[i]);
-        smallestSum += difference;
-        // console.log("difference:", difference);
-        // console.log("smallestSum:", smallestSum);
+        dif += difference;
 
       }
 
-      console.log("quotient:", quotient);
-      console.log("smallestSum:", smallestSum);
-      console.log(smallestSum < quotient);
+      // console.log("quotient:", quotient);
+      // console.log("smallestSum:", smallestDif);
+      // console.log(smallestSum < quotient);
 
-        
-      if (smallestSum < quotient) {
-        quotient = smallestSum;
+      
+      if (dif < smallestDif) {
+        smallestDif = dif;
+
+        console.log("smallest Dif:", smallestDif);
+        console.log("current dif:", dif);
         return true;
 
       //     soulmateName = data[i].name;
@@ -51,6 +50,7 @@ $(".rb-tab").click(function(){
 
 
 $(".trigger").on("click", function(event){
+  smallestDif = 40
   event.preventDefault(); 
 
   survey = [];
@@ -102,11 +102,9 @@ $(".trigger").on("click", function(event){
 
      }
 
-    // soulmateName = data[0].name;
-    // soulmateImg = data[0].photo;
-
     $("#sm-name").html(soulmateName);
     $("#sm-img").attr("src", soulmateImg);
+
 
   });
 
