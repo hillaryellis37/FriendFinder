@@ -3,6 +3,11 @@ html, body {
   min-height: 100%;
 }
 
+#sm-img {
+  height: 250px;
+  width: 370px;
+}
+
 body {
   font-family: sans-serif;
   background: #42426b;
